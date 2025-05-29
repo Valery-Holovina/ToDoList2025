@@ -19,11 +19,16 @@ import SwiftUI
 
 @main
 struct ToDoList2025App: App {
+    
+    //if it changes previw updates
+    @StateObject var listViewModel : ListViewModel = ListViewModel()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 ListView()
             }
+            .environmentObject(listViewModel)
            
         }
     }
