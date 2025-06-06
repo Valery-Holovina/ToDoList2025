@@ -7,11 +7,29 @@
 
 import SwiftUI
 
+/*
+ 
+ MVVM Architecture
+ 
+ Model - data point
+ View - UI
+ ViewModel - manages Models for View
+ 
+ */
+
 @main
 struct ToDoList2025App: App {
+    
+    //if it changes previw updates
+    @StateObject var listViewModel : ListViewModel = ListViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ListView()
+            }
+            .environmentObject(listViewModel)
+           
         }
     }
 }
