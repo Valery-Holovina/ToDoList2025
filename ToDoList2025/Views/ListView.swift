@@ -63,3 +63,5 @@ struct ListView: View {
 
 }
 
+//final step is to create an App Icon and Launch Screen( i will not do)
+//release
