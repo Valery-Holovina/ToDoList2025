@@ -56,7 +56,7 @@ struct ListView: View {
 
 
 #Preview {
-    NavigationView {
+    NavigationStack {
         ListView()
     }
     .environmentObject(ListViewModel())
